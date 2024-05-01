@@ -24,7 +24,7 @@ Online HTML, CSS and JavaScript editor to run code online.
 <script>
   let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
   let usercard = document.getElementById("usercard"); //получаем блок usercard 
-
+  console.log(tg)
   let userid = document.createElement('p'); //создаем еще параграф 
   userid.innerText = `${tg.initData}`; //показываем user_id
   usercard.appendChild(userid); //добавляем

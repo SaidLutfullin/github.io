@@ -25,8 +25,8 @@ Online HTML, CSS and JavaScript editor to run code online.
   function App (props) {
     let tg = window.Telegram.WebApp;
     
-    console.log( tg.initData)
-    return html`<h1>Hello ${props.name}!</h1>`;
+    const er =  tg.initData
+    return html`<h1>Hello ${er}!</h1>`;
   }
 
   render(html`<${App} name="End World" />`, document.body);

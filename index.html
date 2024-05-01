@@ -22,13 +22,13 @@ Online HTML, CSS and JavaScript editor to run code online.
       // Initialize htm with Preact
       const html = htm.bind(h);
     
-      function App (props) {
+      function App () {
         let tg = window.Telegram.WebApp;
 
-        return html`<h1>Hello ${tg.initDataUnsafe.user.username}!</h1>`;
+        return (<h1>Здоров, {tg.initDataUnsafe.user.username}!</h1>)`;
       }
     
-      render(html`<${App} name="World" />`, document.body);
+      render(html`<${App} />`, document.body);
 
   </script>
 </html>

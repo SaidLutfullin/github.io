@@ -23,14 +23,14 @@ Online HTML, CSS and JavaScript editor to run code online.
       const html = htm.bind(h);
     
       function App () {
-        let tg = window.Telegram.WebApp;
+        //let tg = window.Telegram.WebApp;
 
-        return (
+        return (<>
           <h1>Здоров, {tg.initDataUnsafe.user.username}!</h1>
-        );
+        </>)
       }
     
-      render(html`<${App} />`, document.body);
+      render(App, document.body);
 
   </script>
 </html>

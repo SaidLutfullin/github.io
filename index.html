@@ -14,5 +14,17 @@ Online HTML, CSS and JavaScript editor to run code online.
 <body>
 
 </body>
-<script src="script.js" type="module"></script>
+<script type="module">
+  import { h, render } from 'https://esm.sh/preact';
+  import htm from 'https://esm.sh/htm';
+
+  // Initialize htm with Preact
+  const html = htm.bind(h);
+
+  function App (props) {
+    return html`<h1>Hello ${props.name}!</h1>`;
+  }
+
+  render(html`<${App} name="World" />`, document.body);
+</script>
 </html>

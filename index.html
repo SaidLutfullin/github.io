@@ -18,7 +18,21 @@ Online HTML, CSS and JavaScript editor to run code online.
   <p>
     Our HTML editor updates the webview automatically in real-time as you write code.
   </p>
-  <script src="script.js"></script>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script type="module">
+      import { h, render } from 'https://esm.sh/preact';
+      import htm from 'https://esm.sh/htm';
+    
+      // Initialize htm with Preact
+      const html = htm.bind(h);
+    
+      function App (props) {
+        return html`<h1>Hello ${props.name}!</h1>`;
+      }
+    
+      render(html`<${App} name="World" />`, document.body);
+
+  </script>
 </body>
 
 </html>

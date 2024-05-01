@@ -22,11 +22,14 @@ Online HTML, CSS and JavaScript editor to run code online.
 </body>
 
 <script>
-  let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
+  /*let tg = window.Telegram.WebApp; //получаем объект webapp телеграма 
   let usercard = document.getElementById("usercard"); //получаем блок usercard 
   console.log(tg)
   let userid = document.createElement('p'); //создаем еще параграф 
   userid.innerText = `${tg.WebAppUser.username}`; //показываем user_id
-  usercard.appendChild(userid); //добавляем
+  usercard.appendChild(userid); //добавляем*/
+  var WebApp = window.Telegram.WebApp;
+
+  WebApp.showAlert(`Добро пожаловать, @${WebApp.WebAppUser.username}.`);
 </script>
 </html>
